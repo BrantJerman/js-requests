@@ -82,19 +82,20 @@ sayHelloButton.addEventListener('click', sayHello)
     Handle the promise that's returned with a .then, which you should pass a callback function to. Inside the callback function, console.log the response's data (in the intermediate instructions we'll come back to this function and add HTML).
 */ 
 
-// const ohMy = () => {
-//     // YOUR CODE HERE
-//     axios.get('http://localhost:3000/animals' 
-//     ) .then(function (response) {
-//        for (i = 0; i < response.data.length; i++) {
-//         let newElement = document.createElement('p')
-//         newElement.textContent = response.data[i]
-//         newElement.parentNode.append(document.querySelector('body'));
-//        }
-//     })
-// }
+const ohMy = () => {
+    // YOUR CODE HERE
+    axios.get('http://localhost:3000/animals' 
+    ) .then(function (response) {
+       for (i = 0; i < response.data.length; i++) {
+        let newElement = document.createElement('p')
+        newElement.textContent = response.data[i]
+        let body = document.querySelector('#body-tag')
+        body.append(newElement);
+       }
+    })
+}
 
-// document.getElementById('animals-button').addEventListener('click', ohMy)
+document.getElementById('animals-button').addEventListener('click', ohMy)
 
 
 // PROBLEM 6 
